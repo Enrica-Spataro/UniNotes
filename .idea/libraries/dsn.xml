@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="dsn">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/javamail1_4_7/javamail-1.4.7/lib/dsn.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/javamail1_4_7/javamail-1.4.7/lib/gimap.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/javamail1_4_7/javamail-1.4.7/lib/imap.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/javamail1_4_7/javamail-1.4.7/lib/mailapi.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/javamail1_4_7/javamail-1.4.7/lib/pop3.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/javamail1_4_7/javamail-1.4.7/lib/smtp.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,47 @@
+1
+Anatomia, Biologia e Genetica, Medicina Legale, Neuroscienze, Patologia Diagnostica, Igiene e Sanità Pubblica
+2
+Architettura
+3
+Biomedicina Clinica e Molecolare
+4
+Chirurgia
+5
+Economia e Impresa
+6
+Fisica ed Astronomia
+7
+Gestione dei Sistemi Agroalimentari e Ambientali
+8
+Ingegneria Civile e Ambientale
+9
+Ingegneria Elettrica, Elettronica e Informatica
+10
+Ingegneria Industriale
+11
+Matematica e Informatica
+12
+Scienze Biologiche, Geologiche e Ambientali
+13
+Scienze Bio-Mediche
+14
+Scienze Chimiche
+15
+Scienze Chirurgiche, Trapianti d’Organo e Tecnologie Avanzate
+16
+Scienze del Farmaco
+17
+Scienze della Formazione
+18
+Scienze delle Produzioni Agrarie e Alimentari
+19
+Scienze Mediche e Pediatriche
+20
+Scienze Politiche e Sociali
+21
+Scienze Umanistiche
+22
+Seminario Giuridico
+23
+Specialità Medico-Chirurgiche
+0
