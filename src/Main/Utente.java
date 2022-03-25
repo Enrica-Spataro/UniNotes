@@ -231,7 +231,6 @@ public class Utente implements Observer {
         if(listaAppuntiAcquistati.size() != 0) {
             for (Appunto ap : listaAppuntiAcquistati)
                 System.out.println("Codice:" + ap.getCodiceAppunto() + " Titolo " + ap.getTitoloArgomento());
-
             System.out.println("Inserisci il codice dell'appunto che vuoi recensire");
             String scelta = tastiera.readLine();
             for (Appunto app : listaAppuntiAcquistati)
@@ -240,7 +239,7 @@ public class Utente implements Observer {
                     for (Recensione r : app.getListaRecensioni())
                         if (Objects.equals(r.getNickName(), this.nickname)) {
                             System.out.println("Hai già aggiunto una recensione per questo appunto");
-                            uniNotes.menuUtente();
+                            return;
                         }
                 }
             int voto = inserisciVotazione();
@@ -257,7 +256,7 @@ public class Utente implements Observer {
             }
         }else{
             System.out.println("Non hai acquistato nulla");
-            uniNotes.menuUtente();
+
         }
 
     }
