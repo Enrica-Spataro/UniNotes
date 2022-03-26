@@ -6,10 +6,7 @@ import java.io.IOException;
 import java.util.*;
 
 
-import Main.CartaDiCredito;
-import Main.Facolta;
-import Main.UniNotes;
-import Main.Utente;
+import Main.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -66,7 +63,9 @@ public class  testUniNotes {
     @Test
     public void testMateriePerFacolta() throws Exception {
         UniNotes uniNotes=UniNotes.getInstance();
-        assertNotNull(uniNotes.materiePerFacolta(12));
+        Facolta f = uniNotes.elencoFacolta.get(1);
+        f.getListaMaterie().add(new Materia("prova","prova"));
+        assertNotNull(uniNotes.materiePerFacolta(1));
     }
 
     @Test
@@ -103,7 +102,6 @@ public class  testUniNotes {
         }
         uniNotes.registrazione("ciao", "ciao", "ciao", "ciao", "ciao", "ciao-ciao-ciao-ciao", "12/04/2022");
         assertNotNull(uniNotes.elencoUtenti.get("ciao"));
-
 
     }
 

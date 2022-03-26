@@ -3,6 +3,11 @@ package Test;
 import Main.*;
 import org.junit.Test;
 
+import javax.mail.MessagingException;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Objects;
+
 import static java.lang.Thread.sleep;
 import static org.junit.Assert.*;
 
@@ -25,7 +30,7 @@ public class testUtente {
         fail("Unexpected exception");
     }
 }
-@Test
+    @Test
     public void testAcquistaAppunto() throws Exception {
         UniNotes uniNotes = UniNotes.getInstance();
         int scelta = -1;
@@ -56,16 +61,37 @@ public class testUtente {
         }
         assertNotNull(a);
     }
-/*
+
     @Test
-    public void testObserver() throws InterruptedException {
-    UniNotes uniNotes = UniNotes.getInstance();
-    Appunto a = new Appunto("ASDF","prova.it","prova prova", "enri");
-    a.getListaRecensioni().add(new Recensione("enri",4));
-    a.setNumeroRecensioni(1);
-    Utente u= uniNotes.elencoUtenti.get("enri");
-    assertNotNull(u);
-    assertEquals(4,u.getValutazione());
+    public void testInserisciRecensione() throws Exception{
+       UniNotes uniNotes = UniNotes.getInstance();
+       Utente u = uniNotes.elencoUtenti.get("darsap");
+        System.out.println("__ SEZIONE RECENSIONI __");
+        Materia m = null;
+        Facolta f = uniNotes.elencoFacolta.get(1);
+        f.getListaMaterie().add(m=new Materia("prova", "prova"));
+        m.getElencoAppuntiApprovati().put("AAAA",new Appunto("AAAA","www.prova.it","prova","enri"));
+        Acquisto acquisto= new Acquisto("AAAA",u.getNickname());
+        uniNotes.listaAcquisti.add(acquisto);
+        LinkedList<Appunto> listaAppunti = new LinkedList<Appunto>();
+        for (Acquisto a : uniNotes.listaAcquisti) {
+            if (Objects.equals(a.getNickName(), u.getNickname())) {
+                for (Map.Entry<Integer, Facolta> facoltaEntry : uniNotes.elencoFacolta.entrySet()) {
+                    if (facoltaEntry.getValue().getListaMaterie().size() != 0) {
+                        LinkedList<Materia> listaMaterie = facoltaEntry.getValue().getListaMaterie();
+                        for (Materia ma : listaMaterie) {
+                            listaAppunti.add(ma.getElencoAppuntiApprovati().get(a.getCodiceAppunto()));
+                        }
+                    }
+                }
+            }
+        }
+        Appunto ap = listaAppunti.getFirst();
+        ap.getListaRecensioni().add(new Recensione(u.getNickname(), 5));
+        ap.setNumeroRecensioni(ap.getNumeroRecensioni() + 1);
+        listaAppunti.remove(ap);
+        System.out.println("\n\n RECENSIONE REGISTRATA! \n\n");
+        assertNotNull(ap.getListaRecensioni().get(0));
     }
-*/
+
 }

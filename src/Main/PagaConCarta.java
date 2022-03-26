@@ -14,15 +14,12 @@ public class PagaConCarta implements ModalitaPagamento{
         try{
         if(cdc.getCodiceCarta().length() < 19 || scad.compareTo(data) < 0) {
             System.out.println("\n\nCarta non valida, non è possibile effettuare l'acquisto.\n");
-            //UniNotes uniNotes= UniNotes.getInstance();
             throw new Exception("Carta non valida");
-            //uniNotes.menuUtente();
         }
         else{
             System.out.println("PAGAMENTO CARTA:\nAcquisto effettuato con successo.\n");
-        }}catch (Exception e)
+        }}catch (Exception ignored)
         {
-            e.printStackTrace();
         }
 
     }

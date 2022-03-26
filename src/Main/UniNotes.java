@@ -136,7 +136,8 @@ public class UniNotes {
             scelta = Integer.parseInt(this.tastiera.readLine());
             if (scelta == 1)
                 utenteCorrente.acquistaAppunto(elencoFacolta,elencoCarteDiCredito,elencoUtenti);
-
+            else if (scelta==2)
+                menuUtente();
         }
         return listaMaterie;
     }

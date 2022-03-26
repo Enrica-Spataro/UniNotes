@@ -24,5 +24,6 @@ public class RiscattaConPunti implements ModalitaPagamento{
 
         printout.flush();
         printout.close();
+        System.out.println("\n\nControlla la tua casella di posta! Hai ricevuto il link richiesto!\n\n");
     }
 }

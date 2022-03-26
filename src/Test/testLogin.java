@@ -37,7 +37,7 @@ public class testLogin {
         }
     }
     @Test
-    public void testLoginUserPass(){
+    public void testLoginUserPassword(){
         UniNotes uniNotes= UniNotes.getInstance();
         InterfacciaLogin loginAdmin = new LoginAdmin();
         InterfacciaLogin loginUser = new LoginUser();
@@ -49,7 +49,7 @@ public class testLogin {
         }
     }
     @Test
-    public void testLoginNickname(){
+    public void testLoginUserNickname(){
         UniNotes uniNotes= UniNotes.getInstance();
         InterfacciaLogin loginAdmin = new LoginAdmin();
         InterfacciaLogin loginUser = new LoginUser();

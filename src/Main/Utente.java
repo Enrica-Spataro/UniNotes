@@ -163,7 +163,7 @@ public class Utente implements Observer {
             if (scelta == 1) {
                 this.acquistaAppunto(elencoFacolta, elencoCarteDiCredito, elencoUtenti);
             }
-            else
+            else if (scelta==2)
                 return null;
         } else {
             System.out.println("\nAppunti della materia selezionata: \n");
@@ -195,7 +195,6 @@ public class Utente implements Observer {
 
                     Amministratore admin = Amministratore.getInstance();
                     admin.confermaAcquisto(appunto, this);
-                    System.out.println("\n\n\nControlla la tua casella di posta! Hai ricevuto il link richiesto!");
                     return new Acquisto(appunto.getCodiceAppunto(), this.nickname);
                 }
                 else {
@@ -215,7 +214,6 @@ public class Utente implements Observer {
 
                 Amministratore admin = Amministratore.getInstance();
                 admin.confermaAcquisto(appunto, this);
-                System.out.println("\n\n\nControlla la tua casella di posta! Hai ricevuto il link richiesto!");
                 return new Acquisto(appunto.getCodiceAppunto(), this.nickname);
             }
             }
@@ -272,7 +270,7 @@ public class Utente implements Observer {
         return scelta;
     }
 
-    private LinkedList<Appunto> acquistiPerUtente(@NotNull LinkedList<Acquisto> listaAcquisti, Map<Integer, Facolta> elencoFacolta) throws Exception {
+    public LinkedList<Appunto> acquistiPerUtente(@NotNull LinkedList<Acquisto> listaAcquisti, Map<Integer, Facolta> elencoFacolta) throws Exception {
         LinkedList<Appunto> listaAppunti = new LinkedList<Appunto>();
         for (Acquisto a : listaAcquisti) {
             if (Objects.equals(a.getNickName(), this.nickname)) {
