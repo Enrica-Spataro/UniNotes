@@ -66,15 +66,15 @@ public class Amministratore {
         switch (utenteCorrente.getValutazione()) {
             case 0:utenteCorrente.setPunti(utenteCorrente.getPunti() + 2);
                 break;
-            case 1: utenteCorrente.setPunti(utenteCorrente.getPunti() + 1);
+            case 1:utenteCorrente.setPunti(utenteCorrente.getPunti() + 3);
                 break;
-            case 2:utenteCorrente.setPunti(utenteCorrente.getPunti() + 3);
+            case 2:utenteCorrente.setPunti(utenteCorrente.getPunti() + 5);
                 break;
-            case 3:utenteCorrente.setPunti(utenteCorrente.getPunti() + 5);
+            case 3:utenteCorrente.setPunti(utenteCorrente.getPunti() + 7);
                 break;
-            case 4:utenteCorrente.setPunti(utenteCorrente.getPunti() + 8);
+            case 4:utenteCorrente.setPunti(utenteCorrente.getPunti() + 10);
                 break;
-            case 5:utenteCorrente.setPunti(utenteCorrente.getPunti() + 12);
+            case 5:utenteCorrente.setPunti(utenteCorrente.getPunti() + 14);
                 break;
         }
 
