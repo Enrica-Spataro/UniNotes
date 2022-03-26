@@ -10,6 +10,8 @@ public class testGestionePagamento {
 
     @Test
     public void testPagaConPunti() throws Exception {
+        //verifica che una volta effettuato l’acquisto con I punti
+        //quelli dell’utente siano effettivamente diminuiti di 5
         GestionePagamento g = new GestionePagamento();
         UniNotes uniNotes= UniNotes.getInstance();
         Utente u = uniNotes.elencoUtenti.get("darsap");
@@ -21,6 +23,7 @@ public class testGestionePagamento {
     }
     @Test
     public void testPagaConCarta() throws Exception {
+        //verifica che se la carta non è valida l’acquisto fallisce
         GestionePagamento g = new GestionePagamento();
         UniNotes uniNotes= UniNotes.getInstance();
         Utente u = uniNotes.elencoUtenti.get("darsap");

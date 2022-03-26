@@ -18,9 +18,11 @@ public class testAmministratore {
 
     @Test
     public void testAggiornaPuntiUtente() throws Exception {
+        //verifica che, una volta invocato il metoto AggiornaPuntiUtente
+        //i punti dell’utente subiscono effettivamente una modifica
         Amministratore amministratore = Amministratore.getInstance();
         UniNotes uniNotes = UniNotes.getInstance();
-        Utente u = uniNotes.elencoUtenti.get("iscan");
+        Utente u = uniNotes.elencoUtenti.get("darsap");
         int punti = u.getPunti();
 
         amministratore.aggiornaPuntiUtente(u, uniNotes.elencoUtenti);
@@ -29,7 +31,5 @@ public class testAmministratore {
         // mi aspetto che il test commentato fallisca
         // assertEquals(punti, u.getPunti());
     }
-
-
 
 }

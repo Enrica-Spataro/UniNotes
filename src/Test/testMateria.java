@@ -12,6 +12,8 @@ public class testMateria {
 
     @Test
     public void testSelezionaAppunto(){
+        //verifica che se inserito il codice di un appunto esistente nell’elenco di appunti approvati
+        // quest’ultimo venga ritornato
         Facolta f = new Facolta(12,"facolta di prova");
         Materia m = null;
         Appunto a=null;

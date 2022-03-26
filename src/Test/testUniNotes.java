@@ -25,7 +25,8 @@ public class  testUniNotes {
 
     @Test
     public void testLoadUtenti() {
-
+    //verifica che una volta caricato dal file (non vuoto) l’elenco degli utenti
+        // le istanze di utenti non risultino “NULL”
         try{
             String file = "C:\\Users\\Enrica Spataro\\Dropbox\\Magistrale\\Progetto Tomarchio\\Elaborazione\\UniNotes-IT4\\src\\Main\\utenti.txt";
             BufferedReader fp = new BufferedReader(new FileReader(file));
@@ -45,6 +46,8 @@ public class  testUniNotes {
 
     @Test
     public void testLoadFacolta(){
+        //verifica che una volta caricato dal file (non vuoto) l’elenco delle facoltà
+        // le istanze di facoltà non risultino “NULL”
         try {
 
             String file = "C:\\Users\\Enrica Spataro\\Dropbox\\Magistrale\\Progetto Tomarchio\\Elaborazione\\UniNotes-IT4\\src\\Main\\elencoFacolta.txt";
@@ -62,6 +65,8 @@ public class  testUniNotes {
 
     @Test
     public void testMateriePerFacolta() throws Exception {
+        //verifica che una volta inserita una nuova materia per una determinate facoltà
+        //l’elenco delle materie ritornate dal metodo MateriePerFacolta non risulti “NULL”
         UniNotes uniNotes=UniNotes.getInstance();
         Facolta f = uniNotes.elencoFacolta.get(1);
         f.getListaMaterie().add(new Materia("prova","prova"));
@@ -70,13 +75,14 @@ public class  testUniNotes {
 
     @Test
     public void testSetUtenteCorrente(){
-
         uniNotes.setUtenteCorrente(uniNotes.elencoUtenti.get("darsap"));
         assertNotNull(uniNotes.utenteCorrente);
     }
 
     @Test
     public void testLoadCarta() {
+        //verifica che una volta caricato dal file (non vuoto) l’elenco delle carte di credito
+        // le istanze di CartaDiCredito non risultino “NULL”
         try {
             String file = "C:\\Users\\Enrica Spataro\\Dropbox\\Magistrale\\Progetto Tomarchio\\Elaborazione\\UniNotes-IT4\\src\\Main\\carteDiCredito.txt";
             BufferedReader fp = new BufferedReader(new FileReader(file));
@@ -93,6 +99,9 @@ public class  testUniNotes {
 
     @Test
     public void testRegistrazione() throws IOException {
+        //verifica che una volta inseriti i dati per la registrazione:
+        //-	Se la carta non è valida si generi l’eccezione carta non valida
+        //-	Se tutti i dati sono corretti viene aggiunto correttamente all’elenco utenti l’utente registrato
         UniNotes uniNotes= UniNotes.getInstance();
         try {
             uniNotes.registrazione("ciao", "ciao", "ciao", "ciao", "ciao", "ciao", "12/03/2022");

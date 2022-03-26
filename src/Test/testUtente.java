@@ -16,6 +16,9 @@ public class testUtente {
 
 @Test
     public void testInserisciAppunto() throws Exception {
+    //verifica che una volta creato un nuovo appunto, quest’ultimo
+    //sia presente nell’elenco degli appunti in sospeso
+
     Materia m = null;
     UniNotes uniNotes = UniNotes.getInstance();
     Facolta f = uniNotes.elencoFacolta.get(12);
@@ -32,7 +35,10 @@ public class testUtente {
 }
     @Test
     public void testAcquistaAppunto() throws Exception {
-        UniNotes uniNotes = UniNotes.getInstance();
+        //verifica che una volta acquistato una appunto
+        // viene create la nuova istanza di acquisto
+
+    UniNotes uniNotes = UniNotes.getInstance();
         int scelta = -1;
         String nomeMateria;
         Utente u = null;
@@ -64,7 +70,9 @@ public class testUtente {
 
     @Test
     public void testInserisciRecensione() throws Exception{
-       UniNotes uniNotes = UniNotes.getInstance();
+     //   verifica che inserita una recensione,
+        //   venga create l’istanza di recensione
+    UniNotes uniNotes = UniNotes.getInstance();
        Utente u = uniNotes.elencoUtenti.get("darsap");
         System.out.println("__ SEZIONE RECENSIONI __");
         Materia m = null;

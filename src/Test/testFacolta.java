@@ -14,7 +14,8 @@ public class testFacolta {
 
     @Test
     public void testTrovaMateria(){
-
+    //verifica che una volta invocato il metodo TrovaMateria la materia ritornata
+        // non sia “NULL” (se la materia non esiste viene creata)
         Facolta f= new Facolta(23,"prova");
         try{
             assertNotNull(f.trovaMateria(f,"Chimica","Sapienza"));
@@ -25,6 +26,7 @@ public class testFacolta {
 
     @Test
     public void testSelezionaMateria() throws IOException {
+        //verifica che se sono inseriti appunti, la lista di appunti ritornata non sia “NULL”
         Facolta f = new Facolta(12,"facolta di prova");
         Materia m = null;
         f.getListaMaterie().add(m=new Materia("prova","doc"));
